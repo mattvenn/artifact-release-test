@@ -5,10 +5,12 @@ script:
     - if [ $TRAVIS_OS_NAME == "linux" ];   then pyinstaller -F test.py -n test.appimage ; fi
 #    - if [ $TRAVIS_OS_NAME == "windows" ]; then pyinstaller -F beatcounter.py -n beatcounter.exe      ; fi
 #    - if [ $TRAVIS_OS_NAME == "osx" ];     then pyinstaller -F beatcounter.py -n beatcounter.dmg      ; fi
+    - find dist
 deploy:
   provider: releases
   api_key: "e50bd8bcf44ca091cc534870e9dc6978ea11291e"
-  file: "dist/test.appimage"
+  file_glob: true
+  file: dist/*
   skip_cleanup: true
   draft: true # allow non tagged releases
   overwrite: true
