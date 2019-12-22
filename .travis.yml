@@ -7,7 +7,8 @@ language: python
 #    - if [ $TRAVIS_OS_NAME == "osx" ];     then pyinstaller -F beatcounter.py -n beatcounter.dmg      ; fi
 deploy:
   provider: releases
-  api_key: "9a58fbbb3ea16ac25bfee55aef80ec719e0477df"
+  api_key: "e50bd8bcf44ca091cc534870e9dc6978ea11291e"
   file: "testfile"
   skip_cleanup: true
-  draft: true
+  draft: true # allow non tagged releases
+  overwrite: true
