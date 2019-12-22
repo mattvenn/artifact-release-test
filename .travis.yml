@@ -9,3 +9,4 @@ deploy:
   api_key: "9a58fbbb3ea16ac25bfee55aef80ec719e0477df"
   file: "testfile"
   skip_cleanup: true
+  draft: true
