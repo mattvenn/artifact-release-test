@@ -13,3 +13,4 @@ deploy:
   on:
     repo: mattvenn/artifact-release-test
   overwrite: true
+  skip_cleanup: true
